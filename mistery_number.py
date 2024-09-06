@@ -1,28 +1,27 @@
-#Mistery number game in french
 import random
 
-mistery_number = random.randint(1, 100)
-tentatives_max = 5
+mystery_number = random.randint(1, 100)
+max_attempts = 5
 
-print("*** Le jeu du nombre mystère ! ***")
-print(f"Il te reste {tentatives_max} essais ")
+print("*** The Mystery Number Game! ***")
+print(f"You have {max_attempts} attempts left.")
 
-for essais in range(tentatives_max, 0, -1):
-    tentatives = input("Devine le nombre : ")
+for attempts_left in range(max_attempts, 0, -1):
+    guess = input("Guess the number: ")
 
-    if not tentatives.isdigit():
-        print("Veuillez entrer un nombre valide.")
+    if not guess.isdigit():
+        print("Please enter a valid number.")
         continue
 
-    tentatives = int(tentatives)
-    print(f"Il te reste {essais - 1} essais ")
+    guess = int(guess)
+    print(f"You have {attempts_left - 1} attempts left.")
 
-    if tentatives == mistery_number:
-        print(f"Félicitations ! Vous avez trouvé le nombre mystère en {tentatives_max - essais + 1} tentatives.")
+    if guess == mystery_number:
+        print(f"Congratulations! You found the mystery number in {max_attempts - attempts_left + 1} attempts.")
         break
-    print("Le nombre mystère est plus grand." if tentatives < nombre_mystere else "Le nombre mystère est plus petit.")
+    print("The mystery number is higher." if guess < mystery_number else "The mystery number is lower.")
 else:
-    print(f"Dommage ! Le nombre mystère était {mistery_number}")
-    print("Fin du jeu.")
+    print(f"Too bad! The mystery number was {mystery_number}.")
+    print("Game over.")
 
 #Xafiq

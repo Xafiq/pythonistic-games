@@ -1,5 +1,3 @@
-#Simple 80's arcade game in french
-
 import random
 
 class Personage:
