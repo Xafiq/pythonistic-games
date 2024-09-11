@@ -17,5 +17,3 @@ A collection of simple Python games to practice basic programming skills, includ
 
     Each game is self-contained within individual Python scripts.
     To play, simply run the file and follow the in-game prompts.
-    
-Xafiq
